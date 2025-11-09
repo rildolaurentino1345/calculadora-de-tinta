@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular área pintura</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-size: 14px;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: black;
+            color: #fff;
+        }
+        div.container {
+            display:flex;
+            flex-direction: column;
+            width: 420px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #222;
+        }
+        input {
+            padding: 10px;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>Calculando litros de tinta para área em m²! </h1>
+    <label for="">Digite a altura:</label>
+    <input type="number" name="txta" id="txta">
+    <label for="">Digite a largura:</label>
+    <input type="number" name="txtl" id="txtl">
+    <input id="env" type="button" value="Enviar">
+    <div id="res">Quantidade de tinta</div>
+    </div>
+    <script>
+        var env = document.getElementById('env');
+        env.addEventListener('click', calcular);
+
+        function calcular() {
+            var altura = Number (document.getElementById('txta').value);
+            var largura = Number (document.getElementById('txtl').value);
+            var soma = (altura * largura) / 2 ;
+            var area = altura *largura;
+            var res = document.getElementById('res');
+            res.innerHTML = `Vai gastar ${soma.toFixed(2)} litros de tinta para área de ${area.toFixed(2)} m²!`;
+
+        }
+    </script>
+    
+</body>
+</html>
