@@ -16,9 +16,11 @@
             flex-direction: column;
             width: 100%;
             max-width: 540px;
+            height: 450px;
             margin: 20px auto;
             padding: 20px;
             background-color: #222;
+            border-radius: 5px;
         }
 
         input {
